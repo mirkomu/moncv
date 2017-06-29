@@ -18,8 +18,8 @@ $(document).ready(function () {
             datasets: [{
                 data: [$('.progress-bar').attr('aria-valuenow'), 100 - $('.progress-bar').attr('aria-valuenow')],
                 backgroundColor: [
-                    'rgb(135,206,235)',
-                    'rgb(255, 255, 255)'
+                    'deepskyblue',
+                    'lightblue'
                 ],
                 borderColor: [
                     'rgb(70,130,180)',
@@ -36,7 +36,11 @@ $(document).ready(function () {
         new Chart($('canvas:last'), {
             type: 'doughnut',
             data: data,
-            options: Chart.defaults.doughnut
+            options: {
+                legend: {
+                    display: false
+                }
+            }
         });
 
         // Remplace la progressbar actuelle par le chart créé en mémoire
