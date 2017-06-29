@@ -31,7 +31,11 @@ $(document).ready(function () {
 
         // Création du graphique
         let graphiqueHTML = $(this);
+
+        // Remplace la progressbar actuelle par le canvas
         graphiqueHTML.replaceWith('<canvas class="graphique"></canvas>');
+
+        // Création du chart
         /* eslint-disable no-new */
         new Chart($('canvas:last'), {
             type: 'doughnut',
@@ -42,8 +46,5 @@ $(document).ready(function () {
                 }
             }
         });
-
-        // Remplace la progressbar actuelle par le chart créé en mémoire
-        $(this).replaceWith(graphiqueHTML);
     });
 });
