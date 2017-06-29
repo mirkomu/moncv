@@ -4,8 +4,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 /* import 'bootswatch/darkly/bootstrap.min.css'; */
 import './main.css';
 import Chart from 'chart.js';
+import KonamiCode from 'konami-code';
+
+var konami = new KonamiCode();
 
 $(document).ready(function () {
+    let deg = 0;
+    // ----- Plugin jquery permettant d'utiliser le code konami -----
+    // ------ (haut,haut,bas,bas,gauche,droite,gauche,droite,b,a) ------
+    konami.listen(function () {
+        deg += 45;
+        // Modification de la custom properties
+        document.documentElement.style.setProperty('--deg', deg + 'deg');
+    });
+
     // ----- Effet sur les icones -----
     $('.img-contact, .icones').hide().fadeIn(1500, 'linear');
 

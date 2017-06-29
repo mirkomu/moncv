@@ -1,6 +1,13 @@
-body{
+:root {
+	--deg: 0deg;
+}
+
+body{    
     margin:0;
     padding:0;
+
+    transform:
+    rotate(var(--deg))
 }
 
 .description{
