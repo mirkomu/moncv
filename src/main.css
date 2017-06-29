@@ -1,0 +1,98 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+.description{
+    font-style: italic;
+}
+
+.titre{
+    font-size: 1.5em;
+}
+
+.logo{
+    float: right;
+    max-height: 100px;
+    max-width: 200px;
+    margin:20px;
+}
+
+.icones{
+    vertical-align: middle;
+}
+
+.nomComplet{
+    font-size: 3em!important;
+}
+
+/* ----- PARTIE CONTACTS ----- */
+.contacts{
+    margin-top: 20px;
+    list-style-type: none;
+    text-align: left;
+}
+
+.img-contact{
+    max-width: 25px;
+}
+
+.contacts li{
+    margin-top:5px;
+}
+
+/* ----- ENTETE ----- */
+.jumbotron{
+    background-color: skyblue;
+}
+
+header h1{
+    font-size: 4em;
+}
+
+/* MEDIA QUERIES */
+/* Par defaut */
+@media (min-width: 0px) { 
+    .jumbotron{
+        text-align: center;        
+    }
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media (min-width: 768px) { 
+    .jumbotron{
+        text-align: center;        
+    }   
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .jumbotron{
+        text-align: left;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .jumbotron{
+        text-align: left;
+    }
+}
+
+/* ----- PIED DE PAGE ----- */
+footer{
+    background-color: skyblue;
+    padding: 40px 0;
+}
+
+/* ----- TITRES ----- */
+.row h1:first-child{
+    padding-top:40px;
+    text-transform: uppercase;
+    border-top: 2px solid whitesmoke;  
+}
+
+.row:first-child h1:first-child{
+    padding-top:0;
+    border-top: none;
+}
