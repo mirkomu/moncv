@@ -14,6 +14,7 @@ $(document).ready(function () {
     $('.progress').each(function (index) {
         // Préparation des données en reprenant les valeurs des progressbar
         let data = {
+            labels: ['Connaissance', 'Inconnu'],
             datasets: [{
                 data: [$('.progress-bar').attr('aria-valuenow'), 100 - $('.progress-bar').attr('aria-valuenow')],
                 backgroundColor: [
@@ -30,7 +31,7 @@ $(document).ready(function () {
 
         // Création du graphique
         let graphiqueHTML = $(this);
-        graphiqueHTML.replaceWith('<canvas></canvas>');
+        graphiqueHTML.replaceWith('<canvas class="graphique"></canvas>');
         /* eslint-disable no-new */
         new Chart($('canvas:last'), {
             type: 'doughnut',

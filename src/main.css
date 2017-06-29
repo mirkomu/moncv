@@ -26,6 +26,12 @@ body{
     font-size: 3em!important;
 }
 
+.graphique{
+    width:75%!important;
+    height:75%!important;
+    margin:0 auto;
+}
+
 /* ----- PARTIE CONTACTS ----- */
 .contacts{
     margin-top: 20px;
