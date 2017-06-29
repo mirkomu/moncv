@@ -22,13 +22,15 @@ $(document).ready(function () {
             }]
         };
 
-        $(this).replaceWith('<canvas id="graphique' + index + '" width="200" height="100"></canvas>');
-
+        let graphiqueHTML = $(this);
+        graphiqueHTML.replaceWith('<canvas></canvas>');
         /* eslint-disable no-new */
-        new Chart($('#graphique' + index), {
+        new Chart($('canvas:last'), {
             type: 'doughnut',
             data: data,
             options: Chart.defaults.doughnut
         });
+
+        $(this).replaceWith(graphiqueHTML);
     });
 });
